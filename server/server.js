@@ -9,17 +9,13 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use(cors)
 app.use(express.json())
 
-const port = 5500
+const port = 5000
 
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "Alamd@R99!",
     database: "sakila"
-})
-
-app.get('/', (req, res) =>{
-    console.log()
 })
 
 app.listen(port, ()=>{
