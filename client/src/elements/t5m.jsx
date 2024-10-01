@@ -33,11 +33,8 @@ function Top5m(){
                             </tr>)
                         })
                     }
-                    
                 </tbody>
-            </table>
-            
-            
+            </table> 
         </div>
     )
     

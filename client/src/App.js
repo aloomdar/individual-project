@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 import Top5m from './elements/t5m'
 import Top5a from './elements/t5a'
 import Edit from './elements/Edit'

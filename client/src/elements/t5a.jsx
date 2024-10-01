@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import './popup.jsx'
-import popup from './popup'
-import './t5a.css'
 
 function Top5a(){
     const [data, setData] = useState([])
@@ -14,7 +11,6 @@ function Top5a(){
         .catch((err)=>console.log(err))
     }, [])
 
-    
     return(
         <div className='container-fluid'>
             <h3 className='header'>Top 5 Actors</h3>
@@ -31,17 +27,15 @@ function Top5a(){
                     {
                         data.map((top5actors)=>{
                             return(<tr>
-                                <td onClick={popup}>{top5actors.actor_id}</td>
-                                <td onClick={popup}>{top5actors.first_name}</td>
-                                <td onClick={popup}>{top5actors.last_name}</td>
-                                <td onClick={popup}>{top5actors.film_count}</td>
+                                <td>{top5actors.actor_id}</td>
+                                <td>{top5actors.first_name}</td>
+                                <td>{top5actors.last_name}</td>
+                                <td>{top5actors.film_count}</td>
                             </tr>)
                         })
                     }
                 </tbody>
             </table>
-            
-            
         </div>
     )
     

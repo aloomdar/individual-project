@@ -54,6 +54,10 @@ app.post('/add_user', (req, res)=>{
     })
 })
 
+app.get('/search', (req, res)=>{
+    
+})
+
 app.listen(port, ()=>{
     console.log(`Listening on http://localhost:${port}`)
 })
