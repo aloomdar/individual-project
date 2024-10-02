@@ -39,6 +39,29 @@ app.get('/top5actors', (req, res)=>{
     });
 });
 
+//Search for film
+app.get('/search/:param', (req, res)=>{
+    const id = req.params.param;
+    const q = "select * from film where `param`=?";
+    db.query(q, [param], (err, result)=>{
+        if(err) res.json({message: "Server error"});
+        return res.json(result);
+    })
+})
+
+// app.get('/search-by-actor', (req, res)=>{
+//     const searchTerm = req.query.term;
+//     if(!searchTerm){
+//         return res.json(400)
+//         .json({error: "Enter Search Term"})
+//     }
+//     const q = `select film.title, actor.first_name, actor.last_name 
+//     from film
+//     join film_actor on film.film_id = film_actor.film_id
+//     join actor on film_actor.actor_id = actor.actor_id
+//     where actor`
+// })
+
 //Add new customer
 app.post('/add_user', (req, res)=>{
     q = 'insert into customer (`first_name`, `last_name`, `email`, `address`) values (?)'
@@ -55,7 +78,7 @@ app.post('/add_user', (req, res)=>{
 })
 
 app.get('/search', (req, res)=>{
-    
+
 })
 
 app.listen(port, ()=>{

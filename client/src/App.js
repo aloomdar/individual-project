@@ -4,10 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import Top5m from './elements/t5m'
 import Top5a from './elements/t5a'
-import Edit from './elements/Edit'
-import Read from './elements/Read'
 import Create from './elements/Create'
 import Home from './elements/Home'
+import SearchWithPagination from './elements/Search'
 
 function App(){
   return(
@@ -16,8 +15,7 @@ function App(){
         <Route path='/' element={<body><Home /><Top5a /><Top5m /></body>} />
         <Route path='/add_user' element={<Create />} />
         <Route path='/top5' element={<div><Top5a /><Top5m /></div>} />
-        <Route path='/edit/:id' element={<Edit />} />
-        <Route path='/read/:id' element={<Read />} />
+        <Route path='/search' element={<SearchWithPagination />} />
       </Routes>
     </BrowserRouter>
   )
