@@ -18,9 +18,15 @@ function Customers(){
                 <Link className='btn btn-success' to='/add_customer'>Add Customer</Link>
                 <Link className='btn btn-success' to='/'>Home</Link>
             </div>
-            <table>
+            <table class='table1'>
                 <thead>
-
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Store ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Options</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {
