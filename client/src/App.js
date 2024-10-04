@@ -13,7 +13,7 @@ function App(){
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<body><Home /><Top5a /><Top5m /></body>} />
-        <Route path='/add_user' element={<Create />} />
+        <Route path='/add_customer' element={<Create />} />
         <Route path='/top5' element={<div><Top5a /><Top5m /></div>} />
         <Route path='/search' element={<SearchWithPagination />} />
       </Routes>
