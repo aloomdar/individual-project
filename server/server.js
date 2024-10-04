@@ -59,6 +59,15 @@ app.get('/search/:param', (req, res)=>{
   })
 })
 
+//Get list of customers
+app.get('/customers', (req, res)=>{
+  const q = `select customer_id, store_id, first_name, last_name from customer`;
+  db.query(q, (err, result)=>{
+    if(err) res.json({"message": err});
+    return res.json(result);
+  });
+});
+
 //Add new customer
 app.post('/add_customer', (req, res) => {
   const { store_id, first_name, last_name, email, address_id } = req.body;
@@ -96,11 +105,6 @@ app.delete('/customers/:id', (req, res) => {
       
     });
   });
-  
-
-app.get('/search', (req, res)=>{
-
-})
 
 app.listen(port, ()=>{
     console.log(`Listening on http://localhost:${port}`)

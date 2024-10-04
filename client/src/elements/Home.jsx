@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css'
+import { Link } from "react-router-dom";
 
 function Home(){
     return(
@@ -7,12 +8,9 @@ function Home(){
             <div class='container'>
                 <h1>Alamdar's Movie Emporium</h1>
                 <div class='inner-container'>
-                    <a href="/add_customer">
-                    <button className='btn btn-success'>Add Customer</button> 
-                    </a>
-                    <a href="/search">
-                    <button className='btn btn-success'>Search</button> 
-                    </a>
+                    <Link className="btn btn-success" to='/customers'>View Customer</Link>
+                    <Link className="btn btn-success" to='/search'>Search</Link>
+
                 </div>
             </div>
         </html>
