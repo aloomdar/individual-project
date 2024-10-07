@@ -8,8 +8,9 @@ import Home from './elements/Home'
 import Customers from './elements/Customers'
 import Create from './elements/Create'
 import Search from './elements/Search'
-
-
+import Read from './elements/movieDetails'
+import Edit from './elements/Edit'
+import ActorDetails from './elements/actorDetails'
 /* 
 Route paths are endpoints
 This means that I can make buttons redirect to that route created in server.js
@@ -23,6 +24,9 @@ function App(){
         <Route path='/customers' element={<Customers />} />
         <Route path='/add_customer' element={<Create />} />
         <Route path='/search' element={<Search />}/>
+        <Route path='/movie_details/:id' element={<Read />}/>
+        <Route path='/edit_customer/:id' element={<Edit />}/>
+        <Route path='/actor_details/:id' element={<ActorDetails />}/>
       </Routes>
     </BrowserRouter>
   )
